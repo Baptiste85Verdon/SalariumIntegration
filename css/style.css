@@ -1,0 +1,133 @@
+/* Variables */
+:root {
+    /* Colors */
+	--color-bg: #FBFAF7;
+	--color-white: #FFFFFF;
+    --color-text:        #0E0E0D;
+    --color-text-muted:  #6B6A66;
+    --color-text-italic: #1F3A2E;
+    --color-border:      #E8E6DF;
+    --color-separator:   #D6D3CA;
+
+    /* Fonts */
+    --font-serif:  'Instrument Serif', Georgia, serif;
+    --font-geist:   'Geist', 'DM Sans', sans-serif;
+
+    /* Padding */
+    --container-padding: clamp(1rem, 5vw, 400px);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-geist);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: var(--font-geist);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Navbar */
+
+.navbar {
+    height: 69px;
+    background-color: rgba(251, 250, 247, 0.85); /* #FBFAF7 à 85% selon la maquette*/
+    border-bottom: 1px solid var(--color-border);
+    position: sticky; 
+    top: 0;
+    z-index: 100;
+}
+
+.navbar_container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar_logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navbar_logo_text {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 33px;
+  letter-spacing: -0.22px;
+  color: var(--color-text);
+}
+
+.navbar_logo_tld {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: -0.22px;
+  color: var(--color-text-muted);
+}
+
+.navbar_menu {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.navbar_menu_item {
+    font-family: var(--font-geist);
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--color-text);
+    transition: color 0.2s ease;
+    
+}
+
+.navbar_menu_item:hover {
+    color: var(--color-text-muted);
+}
+
+.navbar_contact {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--color-white);
+  background-color: var(--color-text);
+  padding: 8px 18px;
+  border-radius: 8px;
+  transition: opacity 0.2s ease;
+}
+
+.navbar_contact:hover {
+  opacity: 0.85;
+}
