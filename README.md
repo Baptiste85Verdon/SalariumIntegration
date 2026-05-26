@@ -1,9 +1,3 @@
-URL      : http://salarium.local
-Username : admin
-Password : admin
-Email    : admin@salarium.local
-
-
 # Salarium — Calculateur brut / net
 
 Intégration d'une landing page avec calculateur de salaire brut / net, développée en HTML/CSS/JS puis intégrée dans WordPress via un thème custom et un plugin.
@@ -101,6 +95,8 @@ git clone https://github.com/Baptiste85Verdon/SalariumIntegration/
    - Vers : `[votre-site-local]/app/public/wp-content/themes/`
 
 2. Activez le thème depuis le dashboard administrateur de WordPress :
+    - Accédez au tableau de bord via :
+      `http://[nom-de-votre-site].local/wp-admin`
     - WP Admin → Apparence → Thèmes → Activer **Salarium**
 
 ### Ce qu'on y trouve
