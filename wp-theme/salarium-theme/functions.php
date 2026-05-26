@@ -24,6 +24,14 @@ function salarium_enqueue_assets() {
     '1.0.0',        // Version
     true              // Charger dans le footer
     );
+
+    // Font Awesome
+    wp_enqueue_style(
+    'font-awesome',
+    'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css',
+    array(),
+    '6.5.0'
+);
 }
 // Hook pour charger les assets
 add_action('wp_enqueue_scripts', 'salarium_enqueue_assets');

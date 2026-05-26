@@ -1,0 +1,321 @@
+/* Variables */
+:root {
+    /* Colors */
+    --calc-bg:          #FFFFFF;
+    --calc-bg-beige:    #F4F2EC;
+    --calc-border:      #E8E6DF;
+    --calc-border-input:#D6D3CA;
+    --calc-text:        #0E0E0D;
+    --calc-text-muted:  #6B6A66;
+    --calc-gradient-1:  #F3EFE5;
+    --calc-gradient-2:  #F7F3E8;
+    --calc-error:       #E53E3E;
+
+    /* Fonts */
+    --font-serif:       'Instrument Serif', Georgia, serif;
+    --font-geist:        'Geist', 'DM Sans', sans-serif;
+}
+
+/* Styles pour le calculateur de salaire */
+
+/* Conteneur principal */
+.calculator {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 1rem 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 1120px;
+}
+
+.calc_card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--calc-bg);
+    border: 1px solid var(--calc-border);
+    border-radius: 14px;
+    overflow: hidden;
+    align-items: start;
+}
+
+/* Partie formulaire */
+.calc_form {
+    padding: 3rem 2rem 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Toggles */
+.calc_controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.calc_toggle_group {
+    display: flex;
+    align-items: center;
+    background-color: var(--calc-bg-beige);
+    border: 1px solid var(--calc-border);
+    border-radius: 9px;
+    padding: 3px;
+}
+
+.calc_toggle_btn {
+    font-family: var(--font-geist);
+    font-weight: 500;
+    font-size: 13px;
+    color: var(--calc-text-muted);
+    padding: 0.375rem 0.75rem; /* 6px 12px */
+    border-radius: 7px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.calc_toggle_btn--active {
+    background-color: var(--calc-bg);
+    color: var(--calc-text);
+    border: 1px solid var(--calc-border);
+}
+
+/* Champs */
+.calc_field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.calc_field_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.calc_label {
+    font-family: var(--font-geist);
+    font-weight: 500;
+    font-size: 13px;
+    color: var(--calc-text-muted);
+}
+
+.calc_hint {
+    font-family: var(--font-geist);
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--calc-text-muted);
+}
+
+.calc_input_wrapper {
+    display: flex;
+    align-items: center;
+    background-color: var(--calc-bg);
+    border: 1px solid var(--calc-border-input);
+    border-radius: 10px;
+    padding: 1rem 0.5rem;    /* 16px 8px */
+}
+
+.calc_input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: none;
+    font-family: var(--font-serif);
+    font-size: 34px;
+    color: var(--calc-text);
+}
+
+/* Supprime les flèches sur input number */
+.calc_input::-webkit-outer-spin-button,
+.calc_input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.calc_currency {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: 22px;
+    color: var(--calc-text-muted);
+}
+
+.calc_error {
+    font-family: var(--font-geist);
+    font-size: 12px;
+    color: var(--calc-error);
+    min-height: 1rem;
+}
+
+/* Séparateur */
+.calc_separator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.calc_separator_line {
+    flex: 1;
+    height: 1px;
+    background-color: var(--calc-border);
+}
+
+.calc_separator_icon {
+    font-size: 10px;
+    color: var(--calc-text-muted);
+    background: var(--calc-bg);
+    border: 1px solid var(--calc-border);
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Partie Résultats */
+.calc_results {
+    background: linear-gradient(180deg, var(--calc-gradient-1), var(--calc-gradient-2));
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.calc_results_label {
+    font-family: var(--font-geist);
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 1.03125rem;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+    color: var(--calc-text-muted);
+    margin-bottom: 1rem;
+}
+
+.calc_results_rate {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.25rem;
+    margin-bottom: 1rem;
+}
+
+.calc_results_rate_number {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: 88px;
+    line-height: 1;
+    letter-spacing: -2.64px;
+    color: var(--calc-text);
+}
+
+.calc_results_percent {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 28px;
+    letter-spacing: -2.64px;
+    color: var(--calc-text-muted);
+    margin-top: 0.5rem;
+}
+
+.calc_results_description {
+    font-family: var(--font-geist);
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 1.4;
+    color: var(--calc-text-muted);
+    margin-bottom: 3rem;
+    max-width: 280px;
+}
+
+.calc_results_stats {
+    display: flex;
+    gap: 12rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--calc-border);
+}
+
+.calc_results_stat_label {
+    font-family: var(--font-geist);
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--calc-text-muted);
+    margin-bottom: 0.25rem;
+}
+
+.calc_results_stat_value {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: 22px;
+    color: var(--calc-text);
+}
+
+.calc_results_stat_currency {
+    font-family: var(--font-geist);
+    font-size: 13px;
+    color: var(--calc-text-muted);
+}
+
+/* Partie note information */
+.calc_note {
+    font-family: var(--font-geist);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.5;
+    color: var(--calc-text-muted);
+    display: flex;
+    gap: 0.5rem;
+    max-width: 640px;
+}
+
+.calc_note_icon {
+    font-size: 11px;
+    color: var(--calc-text-muted);
+    flex-shrink: 0;
+    margin-top: 0.125rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    .calc {
+        padding: 0 1.25rem 2rem;
+    }
+
+    .calc_card {
+        grid-template-columns: 1fr;
+    }
+
+    .calc_results {
+        margin: 0 1rem 1rem;
+        border-radius: 10px;
+    }
+
+    .calc_controls {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+
+    .calc_input {
+        font-size: 22px; 
+    }
+
+    .calc_results_stats {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .calc_results_rate_number {
+        font-size: 64px; 
+    }
+
+    .calc_note {
+        padding: 0 0 1rem;
+    }
+}

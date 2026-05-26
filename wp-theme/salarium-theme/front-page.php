@@ -27,7 +27,7 @@ get_header();
 
     <section class="calculator">
         <div class="calculator_container">
-            <!-- TODO: Ajouter le contenu du calculateur via le shortcode de la partie 3 -->
+            <?php echo do_shortcode('[salary_calculator]'); ?>
         </div>
     </section>
 

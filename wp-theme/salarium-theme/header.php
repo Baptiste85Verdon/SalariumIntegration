@@ -11,8 +11,7 @@
 		<div class="navbar_container">
 
 			<a href="#" class="navbar_logo">
-				<!-- TODO: Ajouter l'image du logo -->
-				<span class="navbar_logo_icon">💼</span>
+				<span class="navbar_logo_icon"><i class="fa-solid fa-comment-dollar navbar_logo_icon"></i></span>
 				<span class="navbar_logo_text">Salarium
                     <span class="navbar_logo_tld">.fr</span>
                 </span>
